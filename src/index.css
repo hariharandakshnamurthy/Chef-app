@@ -1,0 +1,16 @@
+.header-container{
+  background-color: cornsilk;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+
+  .logo{
+    width: 100px;
+    height: 100px;
+  }
+}
+
+.ingredient-form{
+  width: 100%;
+}
