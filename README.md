@@ -1,17 +1,46 @@
-# Chef-app
-# React + Vite
+# Chef-app AI Recipe Generator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
+The Chef-app is an AI-powered recipe generator that helps users create unique and delicious recipes based on their preferences. Leveraging advanced algorithms and a vast database of cooking knowledge, it provides personalized recipes at the click of a button.
 
-Currently, two official plugins are available:
+## Features
+- **Personalized Recipes**: Generate recipes tailored to your taste and dietary restrictions.
+- **Ingredient Suggestions**: Get suggestions based on available ingredients.
+- **Recipe Sharing**: Share your creations with friends and family.
+- **User-friendly Interface**: Easy navigation and a clean design for all users.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Technology Stack
+- **Frontend**: React, HTML, CSS
+- **Backend**: Node.js, Express
+- **Database**: MongoDB
+- **AI**: TensorFlow for recipe generation algorithms
 
-## React Compiler
+## Getting Started Guide
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/hariharandakshnamurthy/Chef-app.git
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd Chef-app
+   ```
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
+4. Start the application:
+   ```bash
+   npm start
+   ```
+5. Open `http://localhost:3000` in your web browser.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Contributing Guidelines
+We welcome contributions from the community! To contribute:
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature-branch`).
+3. Make your changes and commit them (`git commit -m 'Add new feature'`).
+4. Push to the branch (`git push origin feature-branch`).
+5. Create a pull request.
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
