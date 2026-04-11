@@ -1,11 +1,14 @@
-import React from 'react'
+import { Card, Typography } from "antd";
+import ReactMarkdown from "react-markdown";
 
-function Recipe() {
+function Recipe(props) {
+  const { Title } = Typography;
   return (
-    <div>
-      Recipe
-    </div>
-  )
+    <Card>
+      <Title> Recipe From our AI chef:</Title>
+      <ReactMarkdown>{props.recipe}</ReactMarkdown>
+    </Card>
+  );
 }
 
-export default Recipe
+export default Recipe;
