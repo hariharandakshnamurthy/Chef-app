@@ -32,29 +32,22 @@ export default function App() {
       <Header />
       <Divider />
       <Card>
-        <Space>
+        <div className="form-container">
+          <section>
+            Have an ingredient in Hand!! Ask our AI chef for a delicious recipe!!
+          </section>
           <form onSubmit={addIngredient} method="post">
-            <Space>
               <Input placeholder="Enter a Ingredient" name="ingredient" value={inputValue}  onChange={(e)=>setInputValue(e.currentTarget.value)}/>
               <Button type="primary" htmlType="submit">
                 <PlusOutlined />
                 Add Ingredient
               </Button>
-            </Space>
           </form>
-        </Space>
+        </div>
       </Card>
       <Divider />
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          flexDirection: "row",
-          alignItems: "center",
-          backgroundColor:"azure"
-        }}
-      >
-        <Space>
+      <div> 
+        
           <IngredientList
             ingredient={ingredient}
             style={{ paddingBottom: "10px" }}
@@ -62,7 +55,7 @@ export default function App() {
           <Button onClick={() => getRecipe()}>
             Get Recipe from AI Chef 🧑‍🍳
           </Button>
-        </Space>
+       
       </div>
       <Divider />
       {recipe && <Recipe recipe={recipe} />}

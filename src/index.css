@@ -1,16 +1,33 @@
-.header-container{
-  background-color: cornsilk;
+body {
+  text-align: center;
+}
+.header-container {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
+  background-color: transparent !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
 
-  .logo{
+  .logo {
     width: 100px;
     height: 100px;
   }
 }
 
-.ingredient-form{
+.ingredient-form {
   width: 100%;
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+}
+
+.form-container form {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
