@@ -1,5 +1,5 @@
 import React from "react";
-import chef from "../assets/chef.png";
+import chef from "../assets/chefS1.png";
 import { Card, Image, Space, Typography } from "antd";
 
 function Header() {
