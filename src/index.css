@@ -1,19 +1,25 @@
-body {
-  text-align: center;
+*{
+  box-sizing: border-box;
 }
+
+body {
+    margin: 0;
+    font-family: Inter, sans-serif;
+    background-color: #FAFAF8;
+}
+
 .header-container {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
-  background-color: transparent !important;
-  background: transparent !important;
-  border: none !important;
-  box-shadow: none !important;
+    justify-content: center;
+    align-items: center;
+    gap: 11px;
+    height: 100px;
+    background-color: white;
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.10), 0px 1px 2px 0px rgba(0, 0, 0, 0.06);
 
   .logo {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
   }
 }
 
@@ -31,3 +37,21 @@ body {
   align-items: center;
   gap: 10px;
 }
+
+.list-container{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+  .get-button{
+    font-family: Inter, sans-serif;
+    border-radius: 6px;
+    border: none;
+    background-color: #141413;
+    color: #FAFAF8;
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+

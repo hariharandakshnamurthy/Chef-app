@@ -9,7 +9,7 @@ import { getRecipeFromGemini } from "../ai";
 export default function App() {
   const [ingredient, setIngredient] = useState(["tomato", "potato", "cabbage"]);
   const [recipe, setRecipe] = useState("");
-  const [inputValue, setInputValue] = useState("")
+  const [inputValue, setInputValue] = useState("");
 
   const addIngredient = (event) => {
     event.preventDefault();
@@ -33,29 +33,35 @@ export default function App() {
       <Divider />
       <Card>
         <div className="form-container">
-          <section>
-            Have an ingredient in Hand!! Ask our AI chef for a delicious recipe!!
-          </section>
-          <form onSubmit={addIngredient} method="post">
-              <Input placeholder="Enter a Ingredient" name="ingredient" value={inputValue}  onChange={(e)=>setInputValue(e.currentTarget.value)}/>
+          <Space>
+            <Card>
+              Have an ingredient in Hand!! Ask our AI chef for a delicious
+              recipe!!
+            </Card>
+            <form onSubmit={addIngredient} method="post">
+              <Input
+                placeholder="Enter a Ingredient"
+                name="ingredient"
+                value={inputValue}
+                onChange={(e) => setInputValue(e.currentTarget.value)}
+              />
               <Button type="primary" htmlType="submit">
                 <PlusOutlined />
                 Add Ingredient
               </Button>
-          </form>
+            </form>
+          </Space>
         </div>
       </Card>
       <Divider />
-      <div> 
-        
+      <div className="list-container">
           <IngredientList
             ingredient={ingredient}
-            style={{ paddingBottom: "10px" }}
+            style={{ paddingBottom: "10px", display:"flex",flexWrap:"wrap" }}
           />
-          <Button onClick={() => getRecipe()}>
+          <Button onClick={() => getRecipe()} className="get-button">
             Get Recipe from AI Chef 🧑‍🍳
           </Button>
-       
       </div>
       <Divider />
       {recipe && <Recipe recipe={recipe} />}
