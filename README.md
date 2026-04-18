@@ -11,9 +11,7 @@ The Chef-app is an AI-powered recipe generator that helps users create unique an
 
 ## Technology Stack
 - **Frontend**: React, HTML, CSS
-- **Backend**: Node.js, Express
-- **Database**: MongoDB
-- **AI**: TensorFlow for recipe generation algorithms
+- **AI**: Google Gemini API
 
 ## Getting Started Guide
 1. Clone the repository:
