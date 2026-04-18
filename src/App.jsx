@@ -14,7 +14,7 @@ export default function App() {
 
   useEffect(()=>{
     if(recipe.length!==0 && recipeSection.current !==null){
-      recipeSection.current.scrollIntoView({scroll:"smooth"})
+      recipeSection.current.scrollIntoView({behavior:"smooth"})
     }
   },[(recipe.length!==0 && recipeSection.current !==null)])
 
@@ -35,43 +35,47 @@ export default function App() {
   }
 
   return (
-    <>
+    <div id="root">
       <Header />
-      <Divider />
-      <Card>
+      
+      <Card className="ingredient-card">
         <div className="form-container">
-          <Space>
-            <Card>
-              Have an ingredient in Hand!! Ask our AI chef for a delicious
-              recipe!!
+          <Space direction="vertical" size="middle" style={{ display: 'flex' }}>
+            <Card type="inner" style={{ backgroundColor: '#e6f7ff', border: 'none' }}>
+              Have an ingredient in hand? Ask our AI chef for a delicious recipe!
             </Card>
-            <form onSubmit={addIngredient} method="post">
+            <form onSubmit={addIngredient} className="ingredient-form">
               <Input
-                placeholder="Enter a Ingredient"
+                placeholder="e.g. Tomato, Basil, Garlic..."
                 name="ingredient"
                 value={inputValue}
                 onChange={(e) => setInputValue(e.currentTarget.value)}
+                size="large"
               />
-              <Button type="primary" htmlType="submit">
-                <PlusOutlined />
+              <Button type="primary" htmlType="submit" size="large" icon={<PlusOutlined />}>
                 Add Ingredient
               </Button>
             </form>
           </Space>
         </div>
       </Card>
-      <Divider />
+
       <div className="list-container" ref={recipeSection}>
           <IngredientList
             ingredient={ingredient}
-            style={{ paddingBottom: "10px", display:"flex",flexWrap:"wrap" }}
           />
-          <Button onClick={() => getRecipe()} className="get-button">
-            Get Recipe from AI Chef 🧑‍🍳
-          </Button>
+          {ingredient.length >= 3 && (
+            <Button 
+              onClick={() => getRecipe()} 
+              className="get-button" 
+              block
+            >
+              Get Recipe from AI Chef 🧑‍🍳
+            </Button>
+          )}
       </div>
-      <Divider />
+
       {recipe && <Recipe recipe={recipe} />}
-    </>
+    </div>
   );
 }
