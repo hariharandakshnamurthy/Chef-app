@@ -16,7 +16,7 @@ export default function App() {
     if(recipe.length!==0 && recipeSection.current !==null){
       recipeSection.current.scrollIntoView({behavior:"smooth"})
     }
-  },[(recipe.length!==0 && recipeSection.current !==null)])
+  },[recipe])
 
   const addIngredient = (event) => {
     event.preventDefault();
